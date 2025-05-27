@@ -3,6 +3,7 @@ from datetime import datetime
 from actions import follow, unfollow
 from login import login
 from io import StringIO
+from time import sleep
 
 def get_user_file(action_type):
     if action_type.lower() == "follow":
@@ -38,6 +39,7 @@ if start_button:
 
         status_box.info("🔐 Launching browser and logging in...")
         login()
+        sleep(30)
         status_box.success("✅ Logged in!")
 
         # Log storage for display
